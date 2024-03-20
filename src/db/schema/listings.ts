@@ -49,3 +49,6 @@ export const listingsRelations = relations(listings, ({ one }) => ({
         references: [users.id]
     })
 }))
+
+export type Listing = typeof listings.$inferSelect;
+export type NewListing = typeof listings.$inferInsert;

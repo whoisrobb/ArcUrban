@@ -24,3 +24,6 @@ export const subcategoriesRelations = relations(subcategories, ({ one }) => ({
         references: [categories.id]
     })
 }))
+
+export type Subcategory = typeof subcategories.$inferSelect;
+export type NewSubcategory = typeof subcategories.$inferInsert;

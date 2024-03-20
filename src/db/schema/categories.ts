@@ -13,3 +13,6 @@ export const categoriesRelations = relations(categories, ({ many }) => ({
     listings: many(listings),
     subcategories: many(subcategories)
 }))
+
+export type Category = typeof categories.$inferSelect;
+export type NewCategory = typeof categories.$inferInsert;
